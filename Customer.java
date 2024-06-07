@@ -21,12 +21,13 @@ public class Customer {
     }
 
 
+
     public boolean isServed() {
         return served;
     }
 
-    
     public void setServed(boolean served) {
         this.served = served;
     }
+    
 }
