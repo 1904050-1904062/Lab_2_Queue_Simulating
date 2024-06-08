@@ -3,18 +3,17 @@ import java.util.Queue;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class BankQueue {
-    private int numberOfTellers;
+public class GroceryQueue {
     private int maxQueueLength;
     private Queue<Customer> queue;
     private Lock queueLock;
 
-    public BankQueue(int numberOfTellers, int maxQueueLength) {
-        this.numberOfTellers = numberOfTellers;
+    public GroceryQueue(int maxQueueLength) {
         this.maxQueueLength = maxQueueLength;
         this.queue = new LinkedList<>();
         this.queueLock = new ReentrantLock();
     }
+
     public boolean addCustomer(Customer customer) {
         queueLock.lock();
         try {
@@ -28,6 +27,7 @@ public class BankQueue {
             queueLock.unlock();
         }
     }
+
     public Customer serveCustomer() {
         queueLock.lock();
         try {

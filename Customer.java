@@ -15,12 +15,9 @@ public class Customer {
         return arrivalTime;
     }
 
-
     public long getServiceTime() {
         return serviceTime;
     }
-
-
 
     public boolean isServed() {
         return served;
