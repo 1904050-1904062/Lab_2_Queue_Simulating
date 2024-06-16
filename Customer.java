@@ -23,6 +23,9 @@ public class Customer {
         return served;
     }
 
+
+
+    
     public void setServed(boolean served) {
         this.served = served;
     }
