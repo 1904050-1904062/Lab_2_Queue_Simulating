@@ -15,8 +15,6 @@ public class BankQueue {
         this.queue = new LinkedList<>();
         this.queueLock = new ReentrantLock();
     }
-
-
     
     public boolean addCustomer(Customer customer) {
         queueLock.lock();
@@ -31,6 +29,8 @@ public class BankQueue {
             queueLock.unlock();
         }
     }
+
+    
     public Customer serveCustomer() {
         queueLock.lock();
         try {
@@ -42,7 +42,6 @@ public class BankQueue {
             queueLock.unlock();
         }
     }
-
     public int getQueueSize() {
         queueLock.lock();
         try {
