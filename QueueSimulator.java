@@ -44,7 +44,7 @@ public class QueueSimulator {
             
             currentTime++;
             try {
-                Thread.sleep(1000); // Each second of simulation
+                Thread.sleep(1000); //  One second stop
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

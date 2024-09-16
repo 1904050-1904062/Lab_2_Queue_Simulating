@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        int simulationMinutes = 20; // for 1 min
+        int simulationMinutes = 2; // for 1 min
 
         BankQueue bankQueue = new BankQueue(3, 5);
         GroceryQueues groceryQueues = new GroceryQueues(3, 2);
